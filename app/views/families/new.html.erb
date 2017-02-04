@@ -2,16 +2,20 @@
 <%= form_for @family do |f| %>
   <!-- label for: "family_family_name" -->
   <h3>Create your Family Story: </h3>
-  <%= f.label :family_name, 'Family Name: ' %>
+  <%= f.label :name, 'Family Name: ' %>
   <!-- name: "family[family_name]" id: "family_family_name" -->
-  <%= f.text_field :family_name %>
+  <%= f.text_field :name %>
   <p>
     <!-- Come up with better examples -->
     (Ex: Ross, Thompson, Two Best Friends)
   </p>
 
   <!-- Family Type? -->
-  <%= f.label :family_location, 'Where is your family based out of? ' %>
-  <%= f.text_field :family_location %>
 
+  <!-- Add API to get location -->
+  <!-- Optional, fill in values allowed -->
+  <%= f.label :location, 'Where is your family located? ' %>
+  <%= f.text_field :location %>
+
+  
 <% end %>
