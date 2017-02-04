@@ -8,13 +8,23 @@
     <%= f.text_field :name %>
     <p>
       <!-- Come up with better examples -->
-      (Ex: Ross, Thompson, Two Best Friends)
+      (Ex: Ross, Thompson, The Goonies, Milo & Otis)
+    </p>
+  </div>
+
+  <div id="family_motto">
+    <!-- JS - populate family name after it's typed -->
+    <%= f.label :motto, 'Family Motto: ' %>
+    <%= f.text_field :motto %>
+    <p>
+      (Ex: Goonies never say die, Never tickle a sleeping dragon)
     </p>
   </div>
 
   <!-- Family Type? -->
 
   <div id="family_location">
+    <h4>Location</h4>
     <!-- Add API to get location -->
     <!-- Optional, fill in values allowed -->
     <%= f.label :location, 'Where is your family currently located? ' %>
@@ -25,7 +35,10 @@
     <%= f.text_field :origin_location %>
   </div>
 
+  <br />
+
   <div id="family_history">
+    <h4>History</h4>
     <%= f.label :start_year, 'What year does this family story begin? ' %>
     <%= f.text_field :start_year %>
   </div>
