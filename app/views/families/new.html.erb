@@ -1,0 +1,7 @@
+<!-- form class: "new_family", id: "new_family" -->
+<%= form_for @family do |f| %>
+  <!-- label for: "family_family_name" -->
+  <%= f.label :family_name %>
+  <!-- name: "family[family_name]" id: "family_family_name" -->
+  <%= f.text_field :family_name %>
+<% end %>

@@ -2,6 +2,7 @@ class FamiliesController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
   def new
+    @family = Family.new
   end
 
   def create
