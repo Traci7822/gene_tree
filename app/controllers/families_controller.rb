@@ -1,6 +1,9 @@
 class FamiliesController < ApplicationController
   before_action :authenticate_user!, only: [:create]
-  
+
+  def new
+  end
+
   def create
     @family = Family.new(params[:family])
     @family.users << current_user
