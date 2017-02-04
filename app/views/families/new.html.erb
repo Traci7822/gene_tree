@@ -1,7 +1,12 @@
 <!-- form class: "new_family", id: "new_family" -->
 <%= form_for @family do |f| %>
   <!-- label for: "family_family_name" -->
-  <%= f.label :family_name %>
+  <h3>Create your Family Story: </h3>
+  <%= f.label :family_name, 'Family Name: ' %>
   <!-- name: "family[family_name]" id: "family_family_name" -->
   <%= f.text_field :family_name %>
+  <p>
+    <!-- Come up with better examples -->
+    (Ex: Ross, Thompson, Two Best Friends)
+  </p>
 <% end %>
