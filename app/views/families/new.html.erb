@@ -1,24 +1,33 @@
 <!-- form class: "new_family", id: "new_family" -->
 <%= form_for @family do |f| %>
-  <!-- label for: "family_family_name" -->
-  <h3>Create your Family Story: </h3>
-  <%= f.label :name, 'Family Name: ' %>
-  <!-- name: "family[family_name]" id: "family_family_name" -->
-  <%= f.text_field :name %>
-  <p>
-    <!-- Come up with better examples -->
-    (Ex: Ross, Thompson, Two Best Friends)
-  </p>
+  <div id="family_name">
+    <!-- label for: "family_family_name" -->
+    <h3>Create your Family Story: </h3>
+    <%= f.label :name, 'Family Name: ' %>
+    <!-- name: "family[family_name]" id: "family_family_name" -->
+    <%= f.text_field :name %>
+    <p>
+      <!-- Come up with better examples -->
+      (Ex: Ross, Thompson, Two Best Friends)
+    </p>
+  </div>
 
   <!-- Family Type? -->
 
-  <!-- Add API to get location -->
-  <!-- Optional, fill in values allowed -->
-  <%= f.label :location, 'Where is your family currently located? ' %>
-  <%= f.text_field :location %>
+  <div id="family_location">
+    <!-- Add API to get location -->
+    <!-- Optional, fill in values allowed -->
+    <%= f.label :location, 'Where is your family currently located? ' %>
+    <%= f.text_field :location %>
+    <br />
+    <!-- Family origin location -->
+    <%= f.label :origin_location, 'Where did your families story begin? ' %>
+    <%= f.text_field :origin_location %>
+  </div>
 
-  <!-- Family origin location -->
-  <%= f.label :origin_location, 'Where did your families story begin? ' %>
-  <%= f.text_field :origin_location %>
+  <div id="family_history">
+    <%= f.label :start_year, 'What year does this family story begin? ' %>
+    <%= f.text_field :start_year %>
+  </div>
   <!--  -->
 <% end %>
