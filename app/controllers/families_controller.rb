@@ -8,7 +8,7 @@ class FamiliesController < ApplicationController
   def create
     @family = Family.create(family_params)
     @family.users << current_user
-    
+
     if @family.save
       redirect_to root_path
     end
