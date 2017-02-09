@@ -11,6 +11,9 @@ class FamiliesController < ApplicationController
 
     if @family.save
       redirect_to root_path
+    else
+      @family.errors[:name]
+      render :new
     end
   end
 
